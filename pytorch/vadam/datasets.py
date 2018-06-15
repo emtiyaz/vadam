@@ -9,21 +9,21 @@ import sklearn.model_selection as modsel
 ## PyTorch Dataset for presplit classification datasets ##
 ##########################################################
 
-from explab.data_classes.classification.australian_presplit import AustralianPresplit
-from explab.data_classes.classification.breast_cancer_presplit import BreastCancerPresplit
+from vadam.data_classes.classification.australian_presplit import AustralianPresplit
+from vadam.data_classes.classification.breast_cancer_presplit import BreastCancerPresplit
 
 ######################################################
 ## PyTorch Dataset for presplit regression datasets ##
 ######################################################
 
-from explab.data_classes.regression.boston_presplit import BostonPresplit
-from explab.data_classes.regression.concrete_presplit import ConcretePresplit
-from explab.data_classes.regression.energy_presplit import EnergyPresplit
-from explab.data_classes.regression.kin8nm_presplit import Kin8nmPresplit
-from explab.data_classes.regression.naval_presplit import NavalPresplit
-from explab.data_classes.regression.powerplant_presplit import PowerplantPresplit
-from explab.data_classes.regression.wine_presplit import WinePresplit
-from explab.data_classes.regression.yacht_presplit import YachtPresplit
+from vadam.data_classes.regression.boston_presplit import BostonPresplit
+from vadam.data_classes.regression.concrete_presplit import ConcretePresplit
+from vadam.data_classes.regression.energy_presplit import EnergyPresplit
+from vadam.data_classes.regression.kin8nm_presplit import Kin8nmPresplit
+from vadam.data_classes.regression.naval_presplit import NavalPresplit
+from vadam.data_classes.regression.powerplant_presplit import PowerplantPresplit
+from vadam.data_classes.regression.wine_presplit import WinePresplit
+from vadam.data_classes.regression.yacht_presplit import YachtPresplit
 
 
 DEFAULT_DATA_FOLDER = "./data"
