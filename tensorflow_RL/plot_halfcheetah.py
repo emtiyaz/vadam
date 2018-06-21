@@ -106,6 +106,8 @@ plt.grid()
 
 fig_name = path + ".pdf"
 f.savefig(fig_name, bbox_inches='tight')
+fig_name = path + ".png"
+f.savefig(fig_name, bbox_inches='tight')
 
 plt.show()
 
