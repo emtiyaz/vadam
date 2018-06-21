@@ -41,14 +41,14 @@ Run
 python plot_halfcheetah.py
 ```
 The script loads test returns in .npy files, and plots the mean and stadard error over 5 random seeds.
-![](result/HalfCheetah-v1.pdf "HalfCheetah")
+![](tensorlow_RL/result/HalfCheetah-v1.pdf "HalfCheetah")
 
 ## Remarks
 ### Reproducability of the result:
 The result is reproducible up to some extent due to non-deterministicities of tensorflow-gpu in older versions of tensorflow.
 Even with the same random seeds and same GPU machine, we could not run the same code to have an identical result for differnt runs.
 Though, similar learning curves should appear. ('result/HalfCheetah-v1_2nd' directory contains experimental results for different runs with the same random seeds.)
-![](result/HalfCheetah-v1_2nd.pdf "HalfCheetah_2nd")
+![](tensorlow_RL/result/HalfCheetah-v1_2nd.pdf "HalfCheetah_2nd")
 The non-deterministicty is fixed in newer versions of tensorflow (https://github.com/tensorflow/tensorflow/issues/12731) but we have not tried the new version yet.
 We are planning to re-implement this experiment in pytorch in order to use the same implementation as in our Bayseian neural network experiments.
 
