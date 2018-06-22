@@ -44,6 +44,6 @@ This can further give slightly different results compared to those obtained usin
 To allow for exact reproducibility, we have provided the results obtained from our run in `/results/results.zip`.
 
 ### Mistake in Appendix J:
-In Appendix J of the ICML paper, it is stated that the initial precision of the variational distribution $q$ was set to 10 for Vadam, which was a mistake.
-This initial precision of $q$ was actually set to the value of the precision of the prior distribution.
-This ensures that the initial value of $s$ in Algorithm 1 is set to 0, thus better matching the Adam optimizer (where the initial $s$ is also set to 0).
+In Appendix J of the ICML paper, it is stated that the initial precision of the variational distribution `q` was set to 10 for Vadam, which was a mistake.
+This initial precision of `q` was actually set to the value of the precision of the prior distribution.
+This ensures that the initial value of `s` in Algorithm 1 is set to 0, thus better matching the Adam optimizer (where the initial `s` is also set to 0).
