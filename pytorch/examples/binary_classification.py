@@ -23,7 +23,7 @@ betas = (0.9,0.995)
 # VI parameters
 train_mc_samples = 20
 eval_mc_samples = 20
-prec_init = 10.0
+prec_init = 1.0
 
 ################
 ## Check CUDA ##
@@ -98,7 +98,8 @@ if optimizer=="adam":
     
     optimizer = Adam(model.parameters(),
                      lr = learning_rate,
-                     betas = betas)
+                     betas = betas,
+                     weight_decay = prior_prec / data.get_train_size())
     
     # Evaluate using the point estimate
     
