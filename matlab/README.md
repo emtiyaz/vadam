@@ -29,6 +29,7 @@ There are five directories in addition to the experiment scripts:
 The results in figure 2 of the paper can be reproduced by executing the corresponding MATLAB scripts (listed above). To do so, start MATLAB and execute the script. For example,
 
 ``` yourname@yourmachine: matlab -nodesktop```
+
 ``` >> usps_experiment```
 
 will run the USPS 3vs5 experiment and reproduce figure 2(b). The hyperparameters required for each experiment are hard coded in the corresponding MATLAB script and can be easily changed by modifying the scripts if desired. The random seeds are set in the `run_experiment.m` file and correspond to the restart numbers (e.g. 1, ..., 20 for the experiments with twenty restarts).  
