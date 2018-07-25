@@ -2,7 +2,11 @@
 % @Date:   2018-07-10T14:56:18-07:00
 % @Email:  amishkin@cs.ubc.ca
 % @Last modified by:   aaronmishkin
-% @Last modified time: 2018-07-20T18:30:05-07:00
+% @Last modified time: 2018-07-25T13:29:13-07:00
+
+% ###############################################
+% ############# Implements mf-exact #############
+% ###############################################
 
 function [nlz, log_loss, Sigma, mu] = mf_exact(method_name, y, X, gamma, y_te, X_te, options, mu_start, sigma_start)
 

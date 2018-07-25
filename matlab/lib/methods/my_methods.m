@@ -2,8 +2,11 @@
 % @Date:   2018-07-10T14:22:48-07:00
 % @Email:  amishkin@cs.ubc.ca
 % @Last modified by:   aaronmishkin
-% @Last modified time: 2018-07-20T18:29:37-07:00
+% @Last modified time: 2018-07-25T13:28:53-07:00
 
+% #####################################################
+% ############# Implements Vadam and VOGN #############
+% #####################################################
 
 function [nlz, log_loss, Sigma, mu] = my_methods(method_name, y, X, gamma, y_te, X_te, options, mu_start, sigma_start)
 
