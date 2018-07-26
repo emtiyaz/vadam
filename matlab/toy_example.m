@@ -2,20 +2,33 @@
 % @Date:   2018-07-26T12:02:01-07:00
 % @Email:  amishkin@cs.ubc.ca
 % @Last modified by:   aaronmishkin
-% @Last modified time: 2018-07-26T13:25:51-07:00
+% @Last modified time: 2018-07-26T13:50:55-07:00
+
+% #################################################
+% ############# Reproduce Figure 2(a) #############
+% #################################################
+
 addpath(genpath('.'))
 
 clear all;
 % Set the variance of prior (alpha=1/lambda)
 alpha=100;
 
-% Generate the synthetic data.
+
+% ###################################################
+% ############# Generate Synthetic Data #############
+% ###################################################
+
 dataset_name = 'murphy_synth';
 [y, X, ytest, Xtest] = get_data_log_reg(dataset_name, 0);
 t = (y+1) / 2;
 D = 2;
 
-% Limits and grid size for contour plotting
+
+% ##############################################################
+% ############# Plot the Contours of the Posterior #############
+% ##############################################################
+
 Range = 30;
 Step=0.5;
 [w1,w2]=meshgrid(-Range:Step:Range,-Range:Step:Range);
@@ -33,6 +46,10 @@ post = exp(Log_Joint - logsumexpPMTK(Log_Joint(:),1));
 [i,j]=max(Log_Joint);
 wmap = W(j,:);
 
+% #####################################################
+% ############# Compute MF-Exact Solution #############
+% #####################################################
+
 % Compute the mf-exact solution.
 D = 2;
 sig = [1;1];
@@ -47,7 +64,10 @@ U = v(D+1:end);
 C_exact_vi = diag(U.^2);
 
 
-% Run VOGN and Vadam
+% ##############################################
+% ############# Run VOGN and Vadam #############
+% ##############################################
+
 [N,D] = size(X);
 maxIters = 500000;
 colors = {'r','b','g','m'};
@@ -156,5 +176,9 @@ end
 file_name = strcat('./toy_example_experiment_data.mat');
 save(file_name, 'method', 'dataset_name', 'Sigma_all', 'w_all', 'w1', 'w2', 'W', 'f', 'Log_Prior', 'Log_Like', 'Log_Joint', 'post', 'wmap', 'w_exact_vi', 'C_exact_vi');
 
-% plot and save figure 2 (a)
+
+% ######################################################
+% ############# Plot and Save Figure 2 (a) #############
+% ######################################################
+
 make_fig_two_a
