@@ -2,7 +2,7 @@
 % @Date:   2018-07-10T15:23:29-07:00
 % @Email:  amishkin@cs.ubc.ca
 % @Last modified by:   aaronmishkin
-% @Last modified time: 2018-07-25T11:47:45-07:00
+% @Last modified time: 2018-07-26T13:19:17-07:00
 
 methods_ran = {'mf_exact', 'VOGN', 'Vadam'}
 % specify the methods to run.

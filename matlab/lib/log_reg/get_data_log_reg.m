@@ -1,3 +1,11 @@
+% @Author: aaronmishkin
+% @Date:   2018-06-07T19:03:42-07:00
+% @Email:  amishkin@cs.ubc.ca
+% @Last modified by:   aaronmishkin
+% @Last modified time: 2018-07-26T13:09:11-07:00
+
+
+
 function [y, X, y_te, X_te] = get_data_log_reg(name, seed)
 %name: name of a dataset
 %seed: seed used for creating a train/test set
