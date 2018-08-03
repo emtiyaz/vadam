@@ -1,6 +1,6 @@
 # Install
 
-In the folder containing `setup.py`, run 
+In the folder containing `setup.py`, run
 ```
 pip install --user -e .
 ```
@@ -22,3 +22,9 @@ The code for the UCI experiments together with obtained results can be found in 
 <img src="uci_code/plots/uci_rmse_boston-page-001.jpg" width="200"><img src="uci_code/plots/uci_rmse_concrete-page-001.jpg" width="200"><img src="uci_code/plots/uci_rmse_energy-page-001.jpg" width="200"><img src="uci_code/plots/uci_rmse_kin8nm-page-001.jpg" width="200">
 
 <img src="uci_code/plots/uci_rmse_naval-page-001.jpg" width="200"><img src="uci_code/plots/uci_rmse_powerplant-page-001.jpg" width="200"><img src="uci_code/plots/uci_rmse_wine-page-001.jpg" width="200"><img src="uci_code/plots/uci_rmse_yacht-page-001.jpg" width="200">
+
+# Reproducing VOGN Experiments
+
+The code for the VOGN experiments together with obtained results can be found in `vogn_code`. Using these results you should be able to reprodoce these figures:
+
+<img src="vogn_code/plots/plot_bs1_mc1-page-001.jpg" width="200"><img src="vogn_code/plots/plot_bs1_mc16-page-001.jpg" width="200"><img src="vogn_code/plots/plot_bs128_mc16_legend-page-001.jpg" width="200">

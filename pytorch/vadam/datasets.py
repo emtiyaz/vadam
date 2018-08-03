@@ -2,6 +2,8 @@ import torch
 import numpy as np
 import torch.utils.data as data
 from torch.utils.data.dataloader import DataLoader
+import torchvision.datasets as dset
+import torchvision.transforms as transforms
 
 import sklearn.model_selection as modsel
 
@@ -37,7 +39,21 @@ class Dataset():
     def __init__(self, data_set, data_folder=DEFAULT_DATA_FOLDER):
         super(type(self), self).__init__()
 
-        if data_set == "australian_presplit":
+        if data_set == "mnist":
+            self.train_set = dset.MNIST(root = data_folder,
+                                        train = True,
+                                        transform = transforms.ToTensor(),
+                                        download = True)
+
+            self.test_set = dset.MNIST(root = data_folder,
+                                       train = False,
+                                       transform = transforms.ToTensor())
+
+            self.task = "classification"
+            self.num_features = 28 * 28
+            self.num_classes = 10
+            
+        elif data_set == "australian_presplit":
             self.train_set = AustralianPresplit(root = data_folder,
                                                 train = True)
             self.test_set = AustralianPresplit(root = data_folder,
@@ -53,7 +69,7 @@ class Dataset():
             self.test_set = BreastCancerPresplit(root = data_folder,
                                                  train = False)
 
-            self.task = "classification_presplit"
+            self.task = "classification"
             self.num_features = 10
             self.num_classes = 2
 
@@ -215,7 +231,17 @@ class DatasetCV():
         self.seed = seed
         self.current_split = 0
         
-        if data_set == "australian_presplit":
+        if data_set == "mnist":
+            self.data = dset.MNIST(root = data_folder,
+                                   train = True,
+                                   transform = transforms.ToTensor(),
+                                   download = True)
+
+            self.task = "classification"
+            self.num_features = 28 * 28
+            self.num_classes = 10
+
+        elif data_set == "australian_presplit":
             self.data = AustralianPresplit(root = data_folder,
                                            train = True)
 
@@ -227,7 +253,7 @@ class DatasetCV():
             self.data = BreastCancerPresplit(root = data_folder,
                                              train = True)
 
-            self.task = "classification_presplit"
+            self.task = "classification"
             self.num_features = 10
             self.num_classes = 2
 
