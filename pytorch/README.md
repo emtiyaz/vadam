@@ -33,4 +33,4 @@ The code for the VOGN experiments together with obtained results can be found in
 
 Code for MNIST experiments (not in the paper) together with obtained results can be found in `mnist_code`. These additional experiments show performance and convergence speed of Vadam compared to BBVI+Adam on various on MNIST. Here is an excerpt of the results, showing convergence for the two algorithms for different prior precisions, which is also used as the initial precision for the variational distribution:
 
-<img src="mnist_code/animations/layer1_batchsize1.gif" width="600">
+<img src="mnist_code/animations/layer1_batchsize1.gif" width="400">
