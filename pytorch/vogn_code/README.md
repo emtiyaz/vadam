@@ -1,6 +1,6 @@
-# PyTorch implementation of Bayesian neural network experiments on VOGN.
+# PyTorch implementation of Bayesian neural network experiments for VOGN.
 
-This directory contains the PyTorch implementation of the Bayesian neural network experiments on the VOGN convergence results in the paper.
+This directory contains the PyTorch implementation of the Bayesian neural network experiments for the VOGN convergence results in the paper.
 
 ## Requirements
 The experiment was performed using Python 3.5.2 with the following Python packages:
