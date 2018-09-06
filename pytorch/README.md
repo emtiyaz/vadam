@@ -25,9 +25,10 @@ The code for the UCI experiments together with obtained results can be found in 
 
 # Reproducing VOGN Experiments
 
-The code for the VOGN experiments together with obtained results can be found in `vogn_code`. Using these results you should be able to reproduce these figures:
+The code for the VOGN experiments together with obtained results can be found in `vogn_code`. Using these results you should be able to reproduce the experiments in the paper. Here is an excerpt of the results:
 
-<img src="vogn_code/plots/plot_bs1_mc1-page-001.jpg" width="200"><img src="vogn_code/plots/plot_bs1_mc16-page-001.jpg" width="200"><img src="vogn_code/plots/plot_bs128_mc16_legend-page-001.jpg" width="200">
+<img src="vogn_code/animations/mc16.gif" width="400">
+<!-- <img src="vogn_code/plots/plot_bs1_mc1-page-001.jpg" width="200"><img src="vogn_code/plots/plot_bs1_mc16-page-001.jpg" width="200"><img src="vogn_code/plots/plot_bs128_mc16_legend-page-001.jpg" width="200"> -->
 
 # MNIST Experiments
 
