@@ -534,7 +534,7 @@ class VOGN(Optimizer):
         if not torch.is_tensor(self.state['Precision']):
             p = parameters_to_vector(parameters)
             # mean parameter of variational distribution.
-            self.state['mu'] = torch.tensor(p)
+            self.state['mu'] = torch.tensor(p.detach())
             # covariance parameter of variational distribution -- saved as the diagonal precision matrix.
             self.state['Precision'] = torch.tensor(torch.ones_like(p) * defaults['prec_init'])
 
@@ -551,8 +551,8 @@ class VOGN(Optimizer):
 
             # Get the diagonal of the GGN matrix.
             loss, grad, ggn, M = closure()
-            grad_vec = parameters_to_vector(grad).div(M)
-            ggn = parameters_to_vector(ggn).div(M)
+            grad_vec = parameters_to_vector(grad).div(M).detach()
+            ggn = parameters_to_vector(ggn).div(M).detach()
 
             if mu_grad_hat is None:
                 mu_grad_hat = grad_vec
